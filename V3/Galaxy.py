@@ -34,7 +34,7 @@ class MainWidget(RelativeLayout):
     H_LINES_SPACING = .1
     horizontal_lines = []
 
-    SPEED = .8
+    SPEED = .4
     current_offset_y = 0
     current_y_loop = 0
 
@@ -80,7 +80,7 @@ class MainWidget(RelativeLayout):
             self._keyboard.bind(on_key_down=self.on_keyboard_down)
             self._keyboard.bind(on_key_up=self.on_keyboard_up)
 
-        Clock.schedule_interval(self.update, 1 / 60)
+        Clock.schedule_interval(self.update, 1 / 50)
         self.sound_galaxy.play()
 
     def init_audio(self):
